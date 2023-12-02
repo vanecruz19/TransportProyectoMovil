@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Config">
+
+
+
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hola ¿Cómo podemos ayudarte?"
+        android:textSize="23sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"/>
+
+
+    <TextView
+        android:id="@+id/messageTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comunícate con nosotros si tienes alguna dificultad con nuestro citio web al correo transportgps@gmail.com"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/titleTextView"/>
+
+
+    <!-- Tarjeta 1 -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/messageTextView"
+        android:elevation="9dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="36dp">
+
+            <TextView
+                android:id="@+id/titleTextView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seguridad"
+                android:textSize="20sp"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/messageTextView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Verifica que toda la información que ingreso sea valida, a la hora de no utilizar más la aplicación asegurate de cerrar tu cuenta para que tus datos esten mucho más seguros."
+                android:layout_below="@id/titleTextView1"
+                android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Tarjeta 2 -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/cardView1"
+        android:elevation="9dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="36dp">
+
+            <TextView
+                android:id="@+id/titleTextView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Guía de uso de Transportgps"
+                android:textSize="20sp"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/messageTextView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Crear una cuenta valida, que todos los datos sean correctos. a la hora de ingresar a la aplicación encontraras de lo que se trata la aplicación y logos de la empresa donde al darle click en ver te dirigira hacia rutas donde estan los numeros de las busetas y barrios por los cuales pasan y si te diriges al boton de rutas te enseñara los mapas y sus rutas trazadas para que así te guies de una mejor manera. En perfil encontraras tus datos y si deseas lo puedes editar."
+                android:layout_below="@id/titleTextView2"
+                android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

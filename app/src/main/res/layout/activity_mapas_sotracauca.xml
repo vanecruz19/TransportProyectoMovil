@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapasSotracauca">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#02689F"
+            android:elevation="4dp"
+            app:title="Mapas"
+            app:titleTextColor="@color/white"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+
+        <!-- Primera sección con imagen de fondo y título -->
+        <RelativeLayout
+            android:id="@+id/section1"
+            android:layout_width="match_parent"
+            android:layout_height="324dp"
+            android:background="@drawable/mapa1sotra">
+
+            <TextView
+                android:id="@+id/titleTextViewMapa1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ruta 1"
+                android:textAlignment="center"
+                android:textColor="#0707A6"
+                android:textSize="29sp"
+                android:gravity="center_horizontal" />
+
+        </RelativeLayout>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="20dp" />
+
+        <!-- Segunda sección con imagen de fondo y título -->
+        <RelativeLayout
+            android:id="@+id/section2"
+            android:layout_width="match_parent"
+            android:layout_height="324dp"
+            android:background="@drawable/mapa2sotra">
+
+            <TextView
+                android:id="@+id/titleTextViewMapa2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ruta 2"
+                android:textAlignment="center"
+                android:textColor="#0707A6"
+                android:textSize="29sp"
+                android:gravity="center_horizontal" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="20dp" />
+
+        <!-- Tercera sección con imagen de fondo y título -->
+
+        <RelativeLayout
+            android:id="@+id/section3"
+            android:layout_width="match_parent"
+            android:layout_height="324dp"
+            android:background="@drawable/mapa7sotra">
+
+            <TextView
+                android:id="@+id/titleTextViewMapa4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ruta 7"
+                android:textAlignment="center"
+                android:textColor="#0707A6"
+                android:textSize="29sp"
+                android:gravity="center_horizontal" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="20dp" />
+
+        <!-- Cuarta sección con imagen de fondo y título -->
+
+        <RelativeLayout
+            android:id="@+id/section4"
+            android:layout_width="match_parent"
+            android:layout_height="324dp"
+            android:background="@drawable/mapa8sotra">
+
+            <TextView
+                android:id="@+id/titleTextViewMapa5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ruta 8"
+                android:textAlignment="center"
+                android:textColor="#0707A6"
+                android:textSize="29sp"
+                android:gravity="center_horizontal" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="20dp" />
+
+        <!-- Quinta sección con imagen de fondo y título -->
+
+        <RelativeLayout
+            android:id="@+id/section5"
+            android:layout_width="match_parent"
+            android:layout_height="324dp"
+            android:background="@drawable/mapa9sotra">
+
+            <TextView
+                android:id="@+id/titleTextViewMapa6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ruta 9"
+                android:textAlignment="center"
+                android:textColor="#0707A6"
+                android:textSize="29sp"
+                android:gravity="center_horizontal" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapasPuvenza">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#02689F"
+            android:elevation="4dp"
+            app:title="Mapas"
+            app:titleTextColor="@color/white"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+        <!-- Primera sección con imagen de fondo y título -->
+        <RelativeLayout
+            android:id="@+id/section1"
+            android:layout_width="match_parent"
+            android:layout_height="324dp"
+            android:background="@drawable/map1traspubenz">
+
+            <TextView
+                android:id="@+id/titleTextViewMapa1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ruta 1"
+                android:textAlignment="center"
+                android:textColor="#0707A6"
+                android:textSize="29sp"
+                android:gravity="center_horizontal" />
+
+        </RelativeLayout>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="20dp" />
+
+        <!-- Segunda sección con imagen de fondo y título -->
+        <RelativeLayout
+            android:id="@+id/section2"
+            android:layout_width="match_parent"
+            android:layout_height="324dp"
+            android:background="@drawable/map2traspubenz">
+
+            <TextView
+                android:id="@+id/titleTextViewMapa2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ruta 2"
+                android:textAlignment="center"
+                android:textColor="#0707A6"
+                android:textSize="29sp"
+                android:gravity="center_horizontal" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="20dp" />
+
+        <!-- Tercera sección con imagen de fondo y título -->
+
+        <RelativeLayout
+            android:id="@+id/section3"
+            android:layout_width="match_parent"
+            android:layout_height="324dp"
+            android:background="@drawable/map4traspubenz">
+
+            <TextView
+                android:id="@+id/titleTextViewMapa4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ruta 4"
+                android:textAlignment="center"
+                android:textColor="#0707A6"
+                android:textSize="29sp"
+                android:gravity="center_horizontal" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="20dp" />
+
+        <!-- Cuarta sección con imagen de fondo y título -->
+
+        <RelativeLayout
+            android:id="@+id/section4"
+            android:layout_width="match_parent"
+            android:layout_height="324dp"
+            android:background="@drawable/map5traspubenz">
+
+            <TextView
+                android:id="@+id/titleTextViewMapa5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ruta 5"
+                android:textAlignment="center"
+                android:textColor="#0707A6"
+                android:textSize="29sp"
+                android:gravity="center_horizontal" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="20dp" />
+
+        <!-- Quinta sección con imagen de fondo y título -->
+
+        <RelativeLayout
+            android:id="@+id/section5"
+            android:layout_width="match_parent"
+            android:layout_height="324dp"
+            android:background="@drawable/map6traspubenz">
+
+            <TextView
+                android:id="@+id/titleTextViewMapa6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ruta 6"
+                android:textAlignment="center"
+                android:textColor="#0707A6"
+                android:textSize="29sp"
+                android:gravity="center_horizontal" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="20dp" />
+
+        <!-- Sexta sección con imagen de fondo y título -->
+
+        <RelativeLayout
+            android:id="@+id/section6"
+            android:layout_width="match_parent"
+            android:layout_height="324dp"
+            android:background="@drawable/map6traspubenz">
+
+            <TextView
+                android:id="@+id/titleTextViewMapa8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ruta 8"
+                android:textAlignment="center"
+                android:textColor="#0707A6"
+                android:textSize="29sp"
+                android:gravity="center_horizontal" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="20dp" />
+
+        <!-- Septima sección con imagen de fondo y título -->
+
+        <RelativeLayout
+            android:id="@+id/section7"
+            android:layout_width="match_parent"
+            android:layout_height="324dp"
+            android:background="@drawable/map9traspubenz">
+
+            <TextView
+                android:id="@+id/titleTextViewMapa9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ruta 9"
+                android:textAlignment="center"
+                android:textColor="#0707A6"
+                android:textSize="29sp"
+                android:gravity="center_horizontal" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="20dp" />
+
+        <!-- Octava sección con imagen de fondo y título -->
+
+        <RelativeLayout
+            android:id="@+id/section8"
+            android:layout_width="match_parent"
+            android:layout_height="324dp"
+            android:background="@drawable/map10traspuben">
+
+            <TextView
+                android:id="@+id/titleTextViewMapa10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ruta 10"
+                android:textAlignment="center"
+                android:textColor="#0707A6"
+                android:textSize="29sp"
+                android:gravity="center_horizontal" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="20dp" />
+
+        <!-- Octava sección con imagen de fondo y título -->
+
+        <RelativeLayout
+            android:id="@+id/section9"
+            android:layout_width="match_parent"
+            android:layout_height="324dp"
+            android:background="@drawable/map11traspuben">
+
+            <TextView
+                android:id="@+id/titleTextViewMapa11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ruta 11"
+                android:textAlignment="center"
+                android:textColor="#0707A6"
+                android:textSize="29sp"
+                android:gravity="center_horizontal" />
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>

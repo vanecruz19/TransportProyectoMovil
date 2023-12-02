@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission
+        android:name="android.permission.INTERACT_ACROSS_USERS_FULL"
+        tools:ignore="ProtectedPermissions" />
+
+    <application
+        android:allowBackup="true"
+        android:background="@color/my_primary"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/logotransport"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logotransport"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TransportProyecto"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".editar_foro"
+            android:exported="false" />
+        <activity
+            android:name=".Editar_Perfil"
+            android:exported="false" />
+        <activity
+            android:name=".Perfil"
+            android:exported="false" />
+        <activity
+            android:name=".Config"
+            android:exported="false" />
+        <activity
+            android:name=".Foro"
+            android:exported="false" />
+        <activity
+            android:name=".MapasTraslibertad"
+            android:exported="false" />
+        <activity
+            android:name=".MapasTrastambo"
+            android:exported="false" />
+        <activity
+            android:name=".MapasSotracauca"
+            android:exported="false" />
+        <activity
+            android:name=".MapasPuvenza"
+            android:exported="false" />
+        <activity
+            android:name=".RutasTrastambo"
+            android:exported="false" />
+        <activity
+            android:name=".RutasTraslibertad"
+            android:exported="false" />
+        <activity
+            android:name=".RutasSotracauca"
+            android:exported="false" />
+        <activity
+            android:name=".RutasTranspuvenza"
+            android:exported="false" />
+        <activity
+            android:name=".Empresas"
+            android:exported="false" />
+        <activity
+            android:name=".Nosotros"
+            android:exported="false" />
+        <activity
+            android:name=".Registro"
+            android:exported="false" />
+        <activity
+            android:name=".RecuperarC"
+            android:exported="false" />
+        <activity
+            android:name=".Bienvenidos1"
+            android:exported="false" />
+        <activity
+            android:name=".Menu"
+            android:exported="false"
+            android:label="@string/title_activity_menu" />
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

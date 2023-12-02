@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">TransportProyecto</string>
+    <string name="transportgps">TransportGps</string>
+    <string name="title_activity_menu">Menu</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="users" />
+    <string name="userss">user</string>
+    <string name="name_prueba">Maria</string>
+    <string name="correo">correo</string>
+    <string name="correo_prueba">maria@gmail.com</string>
+    <string name="Usuario">Usuario</string>
+    <string name="Correo">correo</string>
+    <string name="Correoo">Correo</string>
+    <string name="titulo_del_foro">FORO</string>
+    <string name="User" />
+    <string name="actualizar_perfil">Actualizar Perfil</string>
+</resources>

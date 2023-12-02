@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Empresas"
+    android:columnCount="2"
+    android:rowCount="2"
+    android:padding="16dp"
+    android:background="#02689F">
+
+
+
+    <!-- Tarjeta 1 -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:layout_margin="8dp"
+        android:clickable="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="#F9F9FA"> <!-- Establecer color de fondo aquí -->
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="114dp"
+                android:src="@drawable/transpubenza"
+                android:contentDescription="Image 1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TRASPUBENZA"
+
+                android:textSize="20sp"/>
+
+            <Button
+                android:id="@+id/VerTranspuvenza"
+                android:layout_width="112dp"
+                android:layout_height="40dp"
+                android:text="Ver Rutas"
+                android:fontFamily="@font/titulos"
+                android:textColor="@color/white"
+
+                android:backgroundTint="#02689F"
+                />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <!-- Tarjeta 2 -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:layout_margin="8dp"
+        android:clickable="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="#F9F9FA"> <!-- Establecer color de fondo aquí -->
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="114dp"
+                android:src="@drawable/transliberdad"
+                android:contentDescription="Image 1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TRASLIBERTAD"
+                android:textSize="20sp"/>
+            <Button
+                android:id="@+id/VerTranslibertad"
+                android:layout_width="112dp"
+                android:layout_height="40dp"
+                android:backgroundTint="#02689F"
+                android:text="Ver Rutas"
+                android:fontFamily="@font/titulos"
+                android:textColor="@color/white"
+                />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <!-- Tarjeta 3 -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:layout_margin="8dp"
+        android:clickable="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="#F9F9FA"> <!-- Establecer color de fondo aquí -->
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="114dp"
+                android:src="@drawable/sotracaucaaaa"
+                android:contentDescription="Image 1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SOTRACAUCA"
+                android:textSize="20sp"/>
+            <Button
+                android:id="@+id/VerSotraCauca"
+                android:layout_width="112dp"
+                android:layout_height="40dp"
+                android:backgroundTint="#02689F"
+                android:text="Ver Rutas"
+                android:fontFamily="@font/titulos"
+                android:textColor="@color/white"
+                />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <!-- Tarjeta 4 -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:layout_margin="8dp"
+        android:clickable="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="#F8F9FA"> <!-- Establecer color de fondo aquí -->
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="114dp"
+                android:src="@drawable/trastambo"
+                android:contentDescription="Image 1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TRASTAMBO"
+                android:textSize="20sp"/>
+
+            <Button
+                android:id="@+id/VerTrastambo"
+                android:layout_width="112dp"
+                android:layout_height="40dp"
+                android:backgroundTint="#02689F"
+                android:text="Ver Rutas"
+                android:fontFamily="@font/titulos"
+                android:textColor="@color/white"
+                />
+
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</GridLayout>

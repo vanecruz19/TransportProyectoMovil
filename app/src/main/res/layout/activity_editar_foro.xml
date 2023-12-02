@@ -1,0 +1,93 @@
+<!-- res/layout/activity_edit_forum_content.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#02689F"
+        android:elevation="4dp"
+        app:title="Editar foro"
+
+        app:titleTextColor="@color/white"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <!-- Título del formulario -->
+    <TextView
+        android:id="@+id/textViewFormTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Editar Contenido del Foro"
+        android:fontFamily="@font/titulos"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="66dp"/>
+
+    <!-- Campo de entrada para el título -->
+    <EditText
+        android:id="@+id/editTextTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewFormTitle"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/titulos"
+        android:hint="Título"/>
+
+    <!-- Campo de entrada para el contenido -->
+    <EditText
+        android:id="@+id/editTextContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextTitle"
+        android:layout_marginTop="16dp"
+        android:hint="Contenido"
+        android:fontFamily="@font/titulos"/>
+
+    <!-- Botones -->
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextContent"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <!-- Botón para actualizar el contenido -->
+        <Button
+            android:id="@+id/buttonUpdate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Actualizar"
+            android:backgroundTint="#02689F"
+            android:fontFamily="@font/titulos"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp" />
+
+        <!-- Botón para eliminar el contenido -->
+        <Button
+            android:id="@+id/buttonDelete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Eliminar"
+            android:backgroundTint="#02689F"
+            android:fontFamily="@font/titulos"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp" />
+
+        <!-- Botón para subir nuevo contenido -->
+        <Button
+            android:id="@+id/buttonUpload"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#02689F"
+            android:text="Subir"
+            android:fontFamily="@font/titulos"/>
+
+    </LinearLayout>
+</RelativeLayout>

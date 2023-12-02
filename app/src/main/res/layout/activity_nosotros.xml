@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Nosotros">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".ui.home.HomeFragment">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="#02689F"
+                android:elevation="4dp"
+                app:title="Nosotros"
+                app:titleTextColor="@color/white"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+            <TextView
+                android:id="@+id/text_home"
+                android:text="@string/title_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                tools:ignore="MissingConstraints"
+                android:gravity="center_horizontal" />
+
+            <!-- Primera sección con imagen de fondo y título -->
+            <RelativeLayout
+                android:id="@+id/section1"
+                android:layout_width="0dp"
+                android:layout_height="230dp"
+                android:background="@drawable/imagen"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:id="@+id/titleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_horizontal"
+                    android:text="TRANSPORTGPS\nEXPLORA TU CIUDAD"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/titulos"
+                    android:textColor="#F1EFEF"
+                    android:textSize="29sp" />
+
+            </RelativeLayout>
+
+            <!-- Segunda sección con imagen y texto -->
+            <RelativeLayout
+                android:id="@+id/section2"
+                android:layout_width="0dp"
+                android:layout_height="250dp"
+                android:background="#FDFCFA"
+                app:layout_constraintTop_toBottomOf="@+id/section1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="150dp"
+                    android:layout_height="250dp"
+                    android:src="@drawable/imagen" />
+
+
+                <TextView
+                    android:id="@+id/textViewTI"
+                    android:layout_width="wrap_content"
+                    android:layout_height="340dp"
+                    android:text="MISIÓN"
+                    android:fontFamily="@font/titulos"
+                    android:textSize="29sp"
+                    android:layout_marginStart="222dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp" />
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Se busca orientar a las personas que usan el transporte público brindando información precisa y actualizada sobre las rutas, de modo que se puedan guiar a través del sistema de información."
+                    android:textSize="18sp"
+
+                    android:layout_toEndOf="@+id/imageView2"
+                    android:layout_marginStart="16dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageView2"
+                    android:layout_marginLeft="1dp" />
+
+            </RelativeLayout>
+
+            <!-- Tercera sección con imagen y texto -->
+            <RelativeLayout
+                android:id="@+id/section3"
+                android:layout_width="0dp"
+                android:layout_height="240dp"
+                android:background="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/section2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/imagen" />
+                <TextView
+                    android:id="@+id/textViewTIt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="340dp"
+                    android:text="VISIÓN"
+                    android:fontFamily="@font/titulos"
+                    android:textSize="29sp"
+                    android:layout_marginStart="222dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Se busca ofrecer un sistema de información confiable y conveniente para conectar de manera efectiva al usuario con su destino a través de la información de cada ruta."
+                    android:textSize="18sp"
+                    android:layout_toEndOf="@+id/imageView3"
+                    android:layout_marginStart="16dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageView3"
+                    android:layout_marginLeft="16dp" />
+
+            </RelativeLayout>
+
+            <!-- Quinta sección con imagen y texto -->
+
+            <RelativeLayout
+                android:id="@+id/section5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#B50B0B"
+                app:layout_constraintTop_toBottomOf="@+id/section3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <!-- TextView para el título -->
+                <TextView
+                    android:id="@+id/titleTextView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CREADORES"
+                    android:fontFamily="@font/titulos"
+                    android:textSize="24sp"
+                    android:textColor="#FDFDFD"
+                    android:gravity="center"
+                    android:background="#B50B0B"
+                    android:padding="16dp" />
+
+                <!-- GridLayout para las imágenes -->
+                <GridLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:columnCount="2"
+                    android:rowCount="2"
+                    android:padding="1dp"
+                    android:background="@color/design_default_color_error"
+                    android:layout_below="@+id/titleTextView5">
+
+                    <ImageView
+                        android:id="@+id/imageView7"
+                        android:layout_width="239dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/yenifer"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true" />
+                    <ImageView
+                        android:id="@+id/imageView8"
+                        android:layout_width="130dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/vanessa"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true" />
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="239dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/daniel"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true" />
+                    <ImageView
+                        android:id="@+id/imageView9"
+                        android:layout_width="130dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/sebaaas"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true" />
+
+                </GridLayout>
+
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
