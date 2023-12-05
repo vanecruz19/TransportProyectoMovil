@@ -3,16 +3,7 @@ package com.example.transportproyecto
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
-import com.example.transportproyecto.databinding.ActivityLoginBinding
 import com.example.transportproyecto.databinding.ActivityMainBinding
-import com.google.android.material.bottomnavigation.BottomNavigationView
-import java.util.Timer
-import java.util.TimerTask
 
 class MainActivity : AppCompatActivity() {
 
@@ -32,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.ButtonForo.setOnClickListener {
-            startActivity(Intent(this@MainActivity, Foro::class.java))
+            startActivity(Intent(this@MainActivity, MainActivity2::class.java))
         }
 
         binding.ButtonConfig.setOnClickListener {

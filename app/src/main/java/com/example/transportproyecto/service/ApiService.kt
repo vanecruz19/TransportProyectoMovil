@@ -1,5 +1,6 @@
 package com.example.transportproyecto.service
 
+import com.example.transportproyecto.model.Foro
 import com.example.transportproyecto.model.request.LoginRequest
 import com.example.transportproyecto.model.request.RegisterRequest
 import com.example.transportproyecto.model.request.UserRequest
@@ -9,6 +10,7 @@ import com.example.transportproyecto.model.response.User
 import com.example.transportproyecto.model.response.UserResponse
 import org.w3c.dom.Comment
 import retrofit2.Call
+import retrofit2.Response
 import retrofit2.http.*
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -24,6 +26,15 @@ interface ApiService {
     @POST("/api/register")
     fun registerUser(@Body registerRequest: RegisterRequest): Call<RegisterResponse>
 
+
+    ///Datos del foro
+    @GET("/api/comments")
+    suspend fun obtenerComment(): Response<List<Foro>>
+
+    @GET("/api/comments")
+    suspend fun obtenerComment(
+        @Query("character") nombre: String
+    ): Response<List<Foro>>
 
 
 
