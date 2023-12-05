@@ -2,10 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/viewRoot"
+    tools:context=".Editar_Perfil"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Editar_Perfil"
     android:orientation="vertical">
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -13,7 +15,6 @@
         android:background="#02689F"
         android:elevation="4dp"
         app:title="Editar perfil"
-
         app:titleTextColor="@color/white"
         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
 
@@ -24,7 +25,7 @@
         android:background="@color/white">
 
         <LinearLayout
-            android:id="@+id/layout_edit_profile"
+            android:id="@+id/layout_edit_perfil"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10sp"
@@ -41,7 +42,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#02689F"
-
                 android:gravity="center"
                 android:padding="5sp"
                 android:text="@string/actualizar_perfil"
@@ -59,7 +59,6 @@
                 android:layout_marginTop="15sp"
                 android:ems="15"
                 android:hint="@string/Usuario"
-
                 android:textColor="#0c30ff"
                 android:textColorHint="#0c30ff"
                 app:boxBackgroundMode="outline"
@@ -72,20 +71,19 @@
                 app:hintAnimationEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/name"
+                    android:id="@+id/usuario"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
-                    android:inputType="textPersonName"
+                    android:inputType="textEmailAddress"
                     android:textColor="#0c30ff"
                     android:textColorHint="#0c30ff" />
 
                 <TextView
-                    android:id="@+id/tvName"
+                    android:id="@+id/tvUser"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="User"
+                    android:text=""
                     android:textColor="@color/black"
                     android:textSize="15sp"
                     app:hintAnimationEnabled="true"
@@ -121,7 +119,6 @@
                     android:id="@+id/email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
                     android:inputType="textEmailAddress"
                     android:textColor="#0511F2"
                     android:textColorHint="#0511F2" />
@@ -131,8 +128,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-
-                    android:text="correo"
+                    android:text=""
                     android:textColor="@color/black"
                     android:textSize="15sp"
                     app:hintAnimationEnabled="true"
@@ -146,4 +142,3 @@
 
 
 </LinearLayout>
-

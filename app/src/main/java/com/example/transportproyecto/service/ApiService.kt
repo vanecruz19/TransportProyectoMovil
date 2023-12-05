@@ -2,9 +2,11 @@ package com.example.transportproyecto.service
 
 import com.example.transportproyecto.model.request.LoginRequest
 import com.example.transportproyecto.model.request.RegisterRequest
+import com.example.transportproyecto.model.request.UserRequest
 import com.example.transportproyecto.model.response.LoginResponse
 import com.example.transportproyecto.model.response.RegisterResponse
 import com.example.transportproyecto.model.response.User
+import com.example.transportproyecto.model.response.UserResponse
 import org.w3c.dom.Comment
 import retrofit2.Call
 import retrofit2.http.*
@@ -23,14 +25,28 @@ interface ApiService {
     fun registerUser(@Body registerRequest: RegisterRequest): Call<RegisterResponse>
 
 
-    @GET("api/delete/")
+
+
+    @GET("api/users/delete")
     fun deleteUser(): Call<User>
 
+
+    //para obtener un perfil de usuario en especifico
     @GET("api/users/{userId}")
-    fun getUserProfile(@Path("userId") userId: String): Call<User>
+    fun getUserPerfil(@Path("userId") userId: String): Call<User>
+
+
+    //EDITAR PERFIL
+
+    @PUT("api/users/{userId}")
+    fun updatePerfil(@Body userRequest: UserRequest, @Path("userId") userId: String): Call<UserResponse>
+
+
+
+
 
         @PUT("/users/{userId}")
-        fun updateUserProfile(@Path("userId") userId: String, @Body user: User): Call<User>
+        fun updateUserPerfil(@Path("userId") userId: String, @Body user: User): Call<User>
 
 
         @GET("comments")

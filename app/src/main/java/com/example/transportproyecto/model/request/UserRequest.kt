@@ -1,8 +1,6 @@
 package com.example.transportproyecto.model.request
 
-class UserRequest (
-
-    val name: String,
+data class UserRequest(
+    val usuario: String,
     val email: String?
-
-    )
+)

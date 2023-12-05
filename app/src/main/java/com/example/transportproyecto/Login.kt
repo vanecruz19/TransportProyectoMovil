@@ -9,6 +9,7 @@ import com.example.transportproyecto.client.ApiClient
 import com.example.transportproyecto.databinding.ActivityLoginBinding
 import com.example.transportproyecto.model.request.LoginRequest
 import com.example.transportproyecto.model.response.LoginResponse
+import com.example.transportproyecto.model.response.UserManager
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -31,6 +32,8 @@ class Login : AppCompatActivity() {
         binding.btnOlvidarContrasena.setOnClickListener {
             startActivity(Intent(this@Login, RecuperarC::class.java))
         }
+
+
 
     }
 
@@ -67,7 +70,7 @@ class Login : AppCompatActivity() {
 
                         val userId = it.user.id
 
-                        // UserManager.setUserId(userId)
+                       UserManager.setUserId(userId)
 
                         move()
                     }

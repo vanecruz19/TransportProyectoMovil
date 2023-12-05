@@ -6,6 +6,8 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="users" />
+    <string name="editar_perfil">Editar perfil</string>
+    <string name="eliminar_cuenta">Eliminar cuenta</string>
     <string name="userss">user</string>
     <string name="name_prueba">Maria</string>
     <string name="correo">correo</string>

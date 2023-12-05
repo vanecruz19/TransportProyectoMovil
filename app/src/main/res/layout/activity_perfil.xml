@@ -92,10 +92,10 @@
 
 
                 <Button
-                    android:id="@+id/editarPerfil"
+                    android:id="@+id/BtneditarPerfil"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="editar perfil"
+                    android:text="@string/editar_perfil"
                     android:fontFamily="@font/titulos"
                     android:layout_gravity="center"
                     android:backgroundTint="#0D6EFD"
@@ -104,10 +104,10 @@
 
 
                 <Button
-                    android:id="@+id/eliminarCuenta"
+                    android:id="@+id/BtneliminarCuenta"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="eliminar cuenta"
+                    android:text="@string/eliminar_cuenta"
                     android:fontFamily="@font/titulos"
                     android:layout_gravity="center"
                     android:backgroundTint="#DD3445"
@@ -144,7 +144,7 @@
 
             </LinearLayout>
 
-            <!--Uruario-->
+            <!--Usuario-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -177,13 +177,6 @@
                         android:text="@string/name_prueba"
                         android:layout_gravity="center"
                         />
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-
-                        android:inputType="textEmailAddress"
-                        android:autofillHints=""
-                        tools:ignore="LabelFor" />
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
 
@@ -214,7 +207,7 @@
                     >
 
                     <TextView
-                        android:id="@+id/correo"
+                        android:id="@+id/Correo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/correo_prueba"
@@ -223,13 +216,6 @@
                         android:gravity="center"
                         />
 
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-
-                        android:inputType="textEmailAddress"
-                        android:autofillHints=""
-                        tools:ignore="LabelFor" />
 
                 </androidx.cardview.widget.CardView>
 
