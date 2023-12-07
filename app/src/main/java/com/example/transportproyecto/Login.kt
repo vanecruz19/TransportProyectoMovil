@@ -91,7 +91,7 @@ class Login : AppCompatActivity() {
      * Function by move to MainActivity
      */
     private fun move() {
-        startActivity(Intent(this, editar_foro::class.java))
+        startActivity(Intent(this, MainActivity3::class.java))
         finish()
     }
 
