@@ -67,14 +67,10 @@ class Perfil : AppCompatActivity(), View.OnClickListener {
             dialog()
         }
 
-
-
         binding.BtneliminarCuenta.setOnClickListener {
             Toast.makeText(this@Perfil, "Perfil eliminado ", Toast.LENGTH_LONG).show()
         }
     }
-
-
 
     @SuppressLint("MissingInflatedId", "UseCompatLoadingForDrawables", "SuspiciousIndentation",
         "CutPasteId")
@@ -178,8 +174,8 @@ class Perfil : AppCompatActivity(), View.OnClickListener {
                 if (response.isSuccessful){
                     userData = response.body()
                     userData?.let {
-                        findViewById<TextView>(R.id.Usuario).text    = it.usuario
-                        findViewById<TextView>(R.id.Correo).text      =it.email
+                        findViewById<TextView>(R.id.Usuario).text = it.usuario
+                        findViewById<TextView>(R.id.Correo).text  = it.email
                     }
                 }
             }
@@ -191,12 +187,6 @@ class Perfil : AppCompatActivity(), View.OnClickListener {
 
     }
 
-
-
-
-    /**
-     * Update user by id
-     */
     private fun updatePerfil(userRequest: UserRequest, userId: String) {
 
         val apiService = ApiClient.getApiService()
@@ -208,8 +198,8 @@ class Perfil : AppCompatActivity(), View.OnClickListener {
                 {
                     val user = response.body()
                     user?.let {
-                        findViewById<TextView>(R.id.Usuario).text       = it.user
-                        findViewById<TextView>(R.id.Correo).text        = it.email
+                        findViewById<TextView>(R.id.Usuario).text  = it.usuario
+                        findViewById<TextView>(R.id.Correo).text   = it.email
                     }
                 }
             }
@@ -219,10 +209,6 @@ class Perfil : AppCompatActivity(), View.OnClickListener {
             }
         })
     }
-
-
-
-
 
 
     override fun onClick(v: View?) {

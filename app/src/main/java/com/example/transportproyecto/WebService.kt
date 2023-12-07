@@ -13,7 +13,7 @@ import retrofit2.http.Path
 import retrofit2.http.*
 
 object AppConstantes{
-    const val BASE_URL = "http://192.168.1.14:8000"
+    const val BASE_URL = "http://192.168.80.28:8000"
 }
 
 interface WebService {

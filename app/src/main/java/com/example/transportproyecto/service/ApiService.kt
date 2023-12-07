@@ -44,10 +44,8 @@ interface ApiService {
     @PUT("api/users/{userId}")
     fun updatePerfil(@Body userRequest: UserRequest, @Path("userId") userId: String): Call<UserResponse>
 
-
-
-        @PUT("/users/{userId}")
-        fun updateUserPerfil(@Path("userId") userId: String, @Body user: User): Call<User>
+    @PUT("/users/{userId}")
+    fun updateUserPerfil(@Path("userId") userId: String, @Body user: User): Call<User>
 
 
     //Sirve para actualizar un contenido existente.
