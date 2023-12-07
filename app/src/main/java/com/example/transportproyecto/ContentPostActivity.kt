@@ -1,11 +1,10 @@
 package com.example.transportproyecto
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.transportproyecto.databinding.ActivityMainBinding
 
-class Editar_Perfil: AppCompatActivity() {
+class ContentPostActivity: AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {

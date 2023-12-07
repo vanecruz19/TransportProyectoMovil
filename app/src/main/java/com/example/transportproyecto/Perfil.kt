@@ -1,5 +1,4 @@
 package com.example.transportproyecto
-
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
@@ -12,13 +11,16 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.util.PatternsCompat
 import com.example.transportproyecto.client.ApiClient
-import com.example.transportproyecto.databinding.ActivityMainBinding
 import com.example.transportproyecto.databinding.ActivityPerfilBinding
 import com.example.transportproyecto.model.request.UserRequest
 import com.example.transportproyecto.model.response.User
 import com.example.transportproyecto.model.response.UserManager
 import com.example.transportproyecto.model.response.UserResponse
+import com.example.transportproyecto.service.ApiService
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -41,8 +43,6 @@ class Perfil : AppCompatActivity(), View.OnClickListener {
     private lateinit var tvEmail: TextView
 
 
-
-
     @SuppressLint("SetTextI18n", "InflateParams")
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,67 +52,60 @@ class Perfil : AppCompatActivity(), View.OnClickListener {
 
         setSupportActionBar(findViewById(R.id.toolbar))
 
-        binding.BtneditarPerfil.setOnClickListener{
-            startActivity(Intent(this, Editar_Perfil::class.java))
+        binding.uploadContent.setOnClickListener{
+            startActivity(Intent(this, ContentPostActivity::class.java))
         }
         initData()
     }
 
 
     private fun initData() {
-
         userId = UserManager.getUserId()
-
         getUserPerfil(userId.toString())
-
 
         binding.BtneditarPerfil.setOnClickListener {
             dialog()
         }
 
+
+
         binding.BtneliminarCuenta.setOnClickListener {
             Toast.makeText(this@Perfil, "Perfil eliminado ", Toast.LENGTH_LONG).show()
         }
-
     }
+
 
 
     @SuppressLint("MissingInflatedId", "UseCompatLoadingForDrawables", "SuspiciousIndentation",
         "CutPasteId")
 
     private fun dialog(){
-
-
-        //vista
-
         val view = layoutInflater.inflate(R.layout.activity_editar_perfil, null)
+
+
         viewRoot = view.findViewById(R.id.viewRoot)
-
-
         usuario = view.findViewById(R.id.usuario)
         email = view.findViewById(R.id.email)
 
         tvUser = view.findViewById(R.id.tvUser)
         tvEmail= view.findViewById(R.id.tvEmail)
 
-
-
         userData?.let { user ->
-
             usuario.setText(user.usuario)
             email.setText(user.email)
         }
 
         val alertDialog = MaterialAlertDialogBuilder(this)
-
+        alertDialog.setTitle(resources.getString(R.string.title))
+        alertDialog.setPositiveButtonIcon(resources.getDrawable(R.drawable.enviar, theme))
+        alertDialog.setView(view)
         val dialog: AlertDialog = alertDialog.create()
-        dialog.show()
+        dialog.show()//.setPositiveButtonIcon(resources.getDrawable(R.drawable.logo, theme))
         dialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
+
             if (validateEmail() and validateUserAndDate()){
                 if (usuario.text.toString().isNotEmpty() && email.text.toString()
-                        .isNotEmpty()
-                )
-                {
+                    .isNotEmpty()) {
                     val userRequest = UserRequest(
                         usuario.text.toString(),
                         email.text.toString()
@@ -120,14 +113,14 @@ class Perfil : AppCompatActivity(), View.OnClickListener {
                     Toast.makeText(this@Perfil, "Perfil editado correctamente ", Toast.LENGTH_LONG).show()
                     updatePerfil(userRequest, userId.toString())
                     dialog.dismiss()
-                }
-                else{
+                } else {
                     validate()
-                    Toast.makeText(this@Perfil, "llene todos los campos", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@Perfil, "Llene todos los campos", Toast.LENGTH_LONG).show()
                 }
-
             }
-        }}
+        }
+    }
+
 
     private fun validate() {
         val result = arrayOf(validateEmail(), validateUserAndDate())
@@ -215,8 +208,8 @@ class Perfil : AppCompatActivity(), View.OnClickListener {
                 {
                     val user = response.body()
                     user?.let {
-                        findViewById<TextView>(R.id.Usuario).text  = it.user
-                        findViewById<TextView>(R.id.Correo).text = it.email
+                        findViewById<TextView>(R.id.Usuario).text       = it.user
+                        findViewById<TextView>(R.id.Correo).text        = it.email
                     }
                 }
             }
@@ -226,6 +219,12 @@ class Perfil : AppCompatActivity(), View.OnClickListener {
             }
         })
     }
+
+
+
+
+
+
     override fun onClick(v: View?) {
         TODO("Not yet implemented")
     }

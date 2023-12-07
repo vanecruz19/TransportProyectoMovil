@@ -4,10 +4,13 @@ import com.example.transportproyecto.model.Foro
 import com.example.transportproyecto.model.request.LoginRequest
 import com.example.transportproyecto.model.request.RegisterRequest
 import com.example.transportproyecto.model.request.UserRequest
+import com.example.transportproyecto.model.response.ContentResponse
 import com.example.transportproyecto.model.response.LoginResponse
 import com.example.transportproyecto.model.response.RegisterResponse
 import com.example.transportproyecto.model.response.User
 import com.example.transportproyecto.model.response.UserResponse
+import okhttp3.MultipartBody
+import okhttp3.RequestBody
 import org.w3c.dom.Comment
 import retrofit2.Call
 import retrofit2.Response
@@ -27,19 +30,8 @@ interface ApiService {
     fun registerUser(@Body registerRequest: RegisterRequest): Call<RegisterResponse>
 
 
-    ///Datos del foro
-    @GET("/api/comments")
-    suspend fun obtenerComment(): Response<List<Foro>>
-
-    @GET("/api/comments")
-    suspend fun obtenerComment(
-        @Query("character") nombre: String
-    ): Response<List<Foro>>
 
 
-
-    @GET("api/users/delete")
-    fun deleteUser(): Call<User>
 
 
     //para obtener un perfil de usuario en especifico
@@ -54,10 +46,26 @@ interface ApiService {
 
 
 
-
-
         @PUT("/users/{userId}")
         fun updateUserPerfil(@Path("userId") userId: String, @Body user: User): Call<User>
+
+
+    //Sirve para actualizar un contenido existente.
+    fun updateContent(
+        @Path("id") id: String, // Capturar la ID como un parámetro de ruta
+        @Part("user_id") userId: RequestBody ): Call<ContentResponse>
+
+
+    //Sirve para crear un nuevo contenido.
+    fun createContent(
+        @Part("user_id") userId: RequestBody
+    ): Call<ContentResponse>
+
+
+
+
+
+
 
 
         @GET("comments")
@@ -74,6 +82,18 @@ interface ApiService {
 
         @DELETE("comments/{commentId}")
         fun deleteComment(@Path("commentId") commentId: String): Call<Void>
+
+
+    ///Datos del foro
+    @GET("/api/comments")
+    suspend fun obtenerComment(): Response<List<Foro>>
+
+    @GET("/api/comments")
+    suspend fun obtenerComment(
+        @Query("character") nombre: String
+    ): Response<List<Foro>>
+
+
 
 }
 

@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/viewRoot"
-    tools:context=".Editar_Perfil"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -38,16 +37,6 @@
             >
 
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#02689F"
-                android:gravity="center"
-                android:padding="5sp"
-                android:text="@string/actualizar_perfil"
-                android:textColor="@color/white"
-                android:fontFamily="@font/titulos"
-                android:textSize="30sp"/>
 
 
             <com.google.android.material.textfield.TextInputLayout
