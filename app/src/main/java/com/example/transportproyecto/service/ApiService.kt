@@ -7,6 +7,7 @@ import com.example.transportproyecto.model.request.UserRequest
 import com.example.transportproyecto.model.response.ContentResponse
 import com.example.transportproyecto.model.response.LoginResponse
 import com.example.transportproyecto.model.response.RegisterResponse
+import com.example.transportproyecto.model.response.RouteResponse
 import com.example.transportproyecto.model.response.User
 import com.example.transportproyecto.model.response.UserResponse
 import okhttp3.MultipartBody
@@ -91,7 +92,12 @@ interface ApiService {
         @Query("character") nombre: String
     ): Response<List<Foro>>
 
-
-
+    @GET("/v2/directions/driving-car")
+    suspend fun getRoute(
+        @Query("api_key") key: String,
+        @Query("start", encoded = true) start: String,
+        @Query("end", encoded = true) end: String
+    ):Response<RouteResponse>
 }
+
 

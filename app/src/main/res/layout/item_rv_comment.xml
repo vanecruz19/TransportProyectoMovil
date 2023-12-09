@@ -19,10 +19,9 @@
             android:id="@+id/tvIdComment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ID: "
             android:padding="5dp"
             android:gravity="center"
-            android:hint="1"/>
+           />
 
         <TextView
             android:id="@+id/tvTitulo"

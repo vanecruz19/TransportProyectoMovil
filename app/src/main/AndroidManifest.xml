@@ -28,7 +28,9 @@
         android:theme="@style/Theme.TransportProyecto"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
-
+        <activity
+            android:name=".MainActivity5"
+            android:exported="false" />
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
 
@@ -42,16 +44,14 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="YOUR_API_KEY" />
+            android:value="AIzaSyD9HAyLoGLrm6kWNWkGHg68CzQz_kUZYvU" />
 
         <activity
             android:name=".MainActivity3"
             android:exported="false" />
-
-
         <activity
             android:name=".MainActivity2"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".Comment"
             android:exported="false" />
@@ -63,9 +63,6 @@
             android:exported="false" />
         <activity
             android:name=".Config"
-            android:exported="false" />
-        <activity
-            android:name=".Foro"
             android:exported="false" />
         <activity
             android:name=".MapasTraslibertad"

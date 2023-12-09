@@ -18,7 +18,7 @@ class RutasTranspuvenza : AppCompatActivity() {
         clickListener()
 
         binding.BtnMapaPuvenza.setOnClickListener {
-            startActivity(Intent(this@RutasTranspuvenza, MapasPuvenza::class.java))
+            startActivity(Intent(this@RutasTranspuvenza, MainActivity5::class.java))
         }
 
     }

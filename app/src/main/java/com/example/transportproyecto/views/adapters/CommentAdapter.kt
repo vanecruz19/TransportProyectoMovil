@@ -26,7 +26,6 @@ class CommentAdapter(
     override fun onBindViewHolder(holder: CommentViewHolder, position: Int) {
         val comment = listaComment[position]
 
-        holder.tvIdComment.text = comment.id.toString()
         holder.tvTitulo.text = comment.name
         holder.tvComment.text = comment.comment
 
